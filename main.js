@@ -136,6 +136,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }, "-=0.3"); // Icons start slightly before hero-h3 finishes
 
   // skills section 
+  let t6 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skill-container",
+      start: "top 80%",
+      end: "bottom 50%",
+      toggleActions: "play reverse play reverse",
+      markers: false, // Set true for debugging
+    },
+  });
+  // Sequential animations with reduced delay
+  t6.from(".skill-container .section-header", { x: -500, opacity: 0, duration: 1.5, ease: "power2.out" })
+    .from(".skill-container .section-subheader", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=1"); // Start 0.5s before previous animation ends
   gsap.to(".skills-logo", {
       opacity: 1,
       scale: 1,
@@ -175,20 +187,27 @@ let t3 = gsap.timeline({
 });
 // Sequential animations with reduced delay
 t3.from(".resume-container p:nth-of-type(1)", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" })
-  .from(".resumess1", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.5") // Start 0.5s before previous animation ends
-  .from(".journey-grid-header", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.5")
-  .from(".journey-card", { 
+  .from(".resumess1", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5") // Start 0.5s before previous animation ends
+  .from(".ji1 .journey-grid-header", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".ji1 .journey-card", { 
     y: 50, 
     opacity: 0, 
     duration: 1, 
     ease: "power2.out", 
     stagger: 0.2 // Animates each icon one by one
   }, "-=0.3") // Icons start slightly before hero-h3 finishes
-
-  .from(".download-btn", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.5")
-  .from(".resumess2", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.5")
-  .from(".slideshow-container", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.5")
-  .from(".slideshow-dot", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.5");
+  .from(".ji2 .journey-grid-header", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".ji2 .journey-card", { 
+    y: 50, 
+    opacity: 0, 
+    duration: 1, 
+    ease: "power2.out", 
+    stagger: 0.2 // Animates each icon one by one
+  }, "-=0.3") // Icons start slightly before hero-h3 finishes
+  .from(".download-btn", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".resumess2", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".slideshow-container", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".slideshow-dot", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5");
 
 
   // project  section 
@@ -211,15 +230,8 @@ t4.from(".services-container .section-header", { y: 100, opacity: 0, duration: 0
     ease: "power2.out", 
     stagger: 0.2 // Animates each icon one by one
   }, "-=0.3");
-});
 
-
-
-
-  
-  
-gsap.registerPlugin(ScrollTrigger);
-// contact  section 
+  // contact  section 
 let t5 = gsap.timeline({
   scrollTrigger: {
     trigger: ".contact-container ",
@@ -254,3 +266,9 @@ t5.from(".contact-container .section-header", { y: 100, opacity: 0, duration: 1,
     ease: "power2.out", 
     stagger: 0.2 // Animates each icon one by one
   }, "-=1");
+});
+
+
+
+
+
