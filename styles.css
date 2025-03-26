@@ -196,31 +196,13 @@ nav {
   background-color: #f5f6f8;
   height: fit-content;
 }
-.progress-bar-container{
-  width: 80%;
-  margin-inline: auto;
+.skills-logo{
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  opacity: 0; /* Initially hidden */
+  transform: scale(0); /* Initially scaled down */
 }
-.progress-text{
-  height:28px;
-}
-.progress-text p{
-  font-size: .9rem;
-  font-weight: 600;
-  color:#0c0a5d;
-  margin-bottom: 0;
-
-}
-.progress-bar{
-  animation: progress-fill 3s forwards;
-}
-@keyframes progress-fill {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: var(--progress);
-  }}
-
   /* end of skills section  */
 
 /* ---resume section--- */
@@ -635,6 +617,13 @@ form div input, div textarea{
     font-size: .8rem;
     margin-bottom: 0;
   }
+  .skills-logo{
+    height: 75px;
+    width: 75px;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0); /* Initially scaled down */
+  }
 }
 
 
@@ -778,6 +767,13 @@ form div input, div textarea{
     width: 50%;
     
   }
+  .skills-logo{
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0); /* Initially scaled down */
+  }
 }
 /* Large devices (laptops/desktops) */
 @media (width> 992px) {
@@ -817,13 +813,7 @@ form div input, div textarea{
   #skills{
     padding-left: 3rem;
   }
-  .skills-logo{
-    height: 150px;
-    width: 150px;
-    cursor: pointer;
-    opacity: 0; /* Initially hidden */
-    transform: scale(0); /* Initially scaled down */
-  }
+
   .progress-bar-container{
     width: 80%;
   }
@@ -857,6 +847,13 @@ form div input, div textarea{
   .contact-content-right{
     flex-basis: 65%;
     margin-right: 5rem;
+  }
+  .skills-logo{
+    height: 150px;
+    width: 150px;
+    cursor: pointer;
+    opacity: 0; /* Initially hidden */
+    transform: scale(0); /* Initially scaled down */
   }
 }
 
