@@ -70,7 +70,7 @@ nav {
   align-items: center;
   justify-content: flex-end;
   border-radius: 50%;
-  background-color: #f7c193;
+  background-color: #fefadf;
   
 }
 .navbar-ulist {
@@ -116,6 +116,10 @@ nav {
 
 
 .hero-name2{
+  font-size: 3.5rem;
+  /* color: #f78522; */
+}
+.hero-name4{
   font-size: 3.5rem;
   /* color: #f78522; */
 }
@@ -679,8 +683,15 @@ form div input, div textarea{
     height:50px ;
     border-radius: 50%;
     color:#f7a258;
-    margin-left: 14.5px;  /*align the icon*/
+    /* padding-bottom: 16px; change for .active */
+    margin-left: 14.5px;
+      /*14.5align the icon*/
   }
+  .navbar-list.active {
+    background-color: #f78522;
+    .nav-img-div{
+      color:white;}  
+    }
   .bi{
     font-size: 20px;
   }
@@ -795,6 +806,13 @@ form div input, div textarea{
       visibility: visible;
     }
   }
+
+  .navbar-list.active {
+    background-color: #f78522;
+    .nav-img-div{
+      color:white;}  
+    }
+
   #hero {
     background-image:url(images/bg1.png);
   }
@@ -902,6 +920,10 @@ form div input, div textarea{
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
+
+
+
+
 
 
 

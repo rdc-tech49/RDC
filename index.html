@@ -38,8 +38,9 @@
    <!-- gsap animation   -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
 
-   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js" integrity="sha512-aNMyYYxdIxIaot0Y1/PLuEu3eipGCmsEUBrUq+7aVyPGMFH8z0eTP0tkqAvv34fzN6z+201d3T8HPb1svWSKHQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <header id="header" class="">
@@ -48,8 +49,8 @@
         <i class="fas fa-bars"></i>
       </div>
       <ul class="navbar-ulist" id="side-menu">
-        <li class="navbar-list nav-first">
-          <a class="navbar-link nav-active" href="#hero">
+        <li class="navbar-list ">
+          <a class="navbar-link " href="#hero">
             <div class="nav-img-div"><i class="bi bi-house "></i><span class="nav-link-text">Home</span></div>
           </a>
         </li>
@@ -87,6 +88,7 @@
   <section id="hero" class="container-fluid vh-100 d-flex flex-column justify-content-center flex-wrap  text-center text-sm-start align-items-md-start align-items-sm-start">
     <h4 class="fs-1 fw-normal mb-2 deep-orange-gradient hero-h4 ">Hi, Myself</h4>
     <h1 class="hero-name2 fw-bold text-wrap mb-2  gradient-text hero-h1">DINESH CHANDER</h1>
+  
     <h3 class="hero-name3 fs-1 fw-normal mb-2 deep-orange-gradient hero-h3">And I'm <span class="fs-1 fw-normal multiple-text sunset-gradient"></span></h3>
    
     <div class="hero-social-icons d-flex justify-content-center align-items-center mt-2 justify-content-lg-start ">
@@ -163,132 +165,133 @@
   </section>
 
   <!-- ---resume section--- -->
-  <section id="resume" class="resume-container pt-3 mb-4">
-  <p class="section-header mb-2 mt-lg-4 fs-sm-3 fw-semibold">MY QUALIFICATION</p>
-  <h2 class="section-subheader gradient-text resumess1">AWESOME JOURNEY</h2>
-  <div class="journey-grid mt-1 d-flex flex-column  flex-wrap mx-auto justify-content-center align-items-center overflow-hidden flex-md-row">
-    <div class="journey-item d-grid gap-3 ps-5 mt-3 ji1">
-      <div class="journey-grid-header d-flex align-items-center gap-3 fs-5 fw-semibold">
-        <span><i class="ri-graduation-cap-line"></i></span> Education
-      </div>
-      <div class="journey-card  ">
-        <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
-        <div class="pt-2">
-          <p class="tl-duration"> 
-            <span><i class="ri-calendar-fill"></i></span> 2016 - 2018 </p>
-          <h4>Master's in Communication & Networking</h4>
-          <h5>Madras Institute of Technology, Chennai.</h5>
+  <section  class="resume-container pt-3 mb-4" id="resume">
+    <p class="section-header mb-2 mt-lg-4 fs-sm-3 fw-semibold">MY QUALIFICATION</p>
+    <h2 class="section-subheader gradient-text resumess1">AWESOME JOURNEY</h2>
+    <div class="journey-grid mt-1 d-flex flex-column  flex-wrap mx-auto justify-content-center align-items-center overflow-hidden flex-md-row">
+      <div class="journey-item d-grid gap-3 ps-5 mt-3 ji1">
+        <div class="journey-grid-header d-flex align-items-center gap-3 fs-5 fw-semibold">
+          <span><i class="ri-graduation-cap-line"></i></span> Education
+        </div>
+        <div class="journey-card  ">
+          <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
+          <div class="pt-2">
+            <p class="tl-duration"> 
+              <span><i class="ri-calendar-fill"></i></span> 2016 - 2018 </p>
+            <h4>Master's in Communication & Networking</h4>
+            <h5>Madras Institute of Technology, Chennai.</h5>
+          </div>
+        </div>
+        <div class="journey-card">
+          <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
+          <div>
+            <p class="tl-duration"> 
+              <span><i class="ri-calendar-fill"></i></span> 2012 - 2016 </p>
+            <h4>Bachelor's in Electronics and Communication</h4>
+            <h5>Saranathan College of Engineering, Trichy.</h5>
+            
+          </div>
+        </div>
+        <div class="journey-card">
+          <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
+          <div>
+            <p class="tl-duration"> 
+              <span><i class="ri-calendar-fill"></i></span> 2010 - 2012 </p>
+            <h4>HSC in Computer Science</h4>
+            <h5>Arockia Matha Matriculation Higher Secondary School, Trichy.</h5>
+          </div>
         </div>
       </div>
-      <div class="journey-card">
-        <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
-        <div>
-          <p class="tl-duration"> 
-            <span><i class="ri-calendar-fill"></i></span> 2012 - 2016 </p>
-          <h4>Bachelor's in Electronics and Communication</h4>
-          <h5>Saranathan College of Engineering, Trichy.</h5>
-          
+      <div class="journey-item d-grid gap-3 ps-5 mt-3 ji2 " >
+        <div class="journey-grid-header d-flex align-items-center gap-3 fs-5 fw-semibold">
+          <span><i class="ri-briefcase-line"></i></span> Experience
         </div>
-      </div>
-      <div class="journey-card">
-        <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
-        <div>
-          <p class="tl-duration"> 
-            <span><i class="ri-calendar-fill"></i></span> 2010 - 2012 </p>
-          <h4>HSC in Computer Science</h4>
-          <h5>Arockia Matha Matriculation Higher Secondary School, Trichy.</h5>
+        <div class="journey-card">
+          <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
+          <div>
+            <p class="tl-duration">
+              <span><i class="ri-calendar-fill"></i></span> 2019-Present
+            </p>
+            <h4>Technical Officer - SI (T)</h4>
+            <h5>Tamil Nadu Police Department, Chennai.</h5>
+          </div>
+        </div>
+        <div class="journey-card">
+          <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
+          <div>
+            <p class="tl-duration">
+              <span><i class="ri-calendar-fill"></i></span> 2017 - 2018
+            </p>
+            <h4>Lab Assistant</h4>
+            <h5>Madras Institute of Technology, Chennai.</h5>
+          </div>
         </div>
       </div>
     </div>
-    <div class="journey-item d-grid gap-3 ps-5 mt-3 ji2 " >
-      <div class="journey-grid-header d-flex align-items-center gap-3 fs-5 fw-semibold">
-        <span><i class="ri-briefcase-line"></i></span> Experience
-      </div>
-      <div class="journey-card">
-        <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
-        <div>
-          <p class="tl-duration">
-            <span><i class="ri-calendar-fill"></i></span> 2019-Present
-          </p>
-          <h4>Technical Officer - SI (T)</h4>
-          <h5>Tamil Nadu Police Department, Chennai.</h5>
-        </div>
-      </div>
-      <div class="journey-card">
-        <span class="tl-icon"><i class="fas fa-briefcase"></i></span>
-        <div>
-          <p class="tl-duration">
-            <span><i class="ri-calendar-fill"></i></span> 2017 - 2018
-          </p>
-          <h4>Lab Assistant</h4>
-          <h5>Madras Institute of Technology, Chennai.</h5>
-        </div>
-      </div>
+    <div class="download-btn d-flex justify-content-center mt-3">
+      <a href="images/RDC_CV.pdf" download class="main-btn text-decoration-none">
+        <span class="btn-text">Download CV</span>
+        <span class="btn-icon"><i class="fas fa-download"></i></span>
+      </a>
     </div>
-  </div>
-  <div class="download-btn d-flex justify-content-center mt-3">
-    <a href="images/RDC_CV.pdf" download class="main-btn text-decoration-none">
-      <span class="btn-text">Download CV</span>
-      <span class="btn-icon"><i class="fas fa-download"></i></span>
-    </a>
-  </div>
+    </section>
 
   
     <!-- --slideshow section-- -->
-  <div class="certifications-container">
-    <h2 class="section-subheader gradient-text resumess2">CERTIFICATIONS</h2>
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c1.jpg" style="width:100%">
+    <div class="certifications-container">
+      <h2 class="section-subheader gradient-text resumess2">CERTIFICATIONS</h2>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c1.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c2.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c3.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c4.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c5.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c6.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c7.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c8.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c9.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c10.jpg" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+          <img class="slide-image" src="certificates/c11.jpg" style="width:100%">
+        </div>
       </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c2.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c3.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c4.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c5.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c6.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c7.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c8.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c9.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c10.jpg" style="width:100%">
-      </div>
-      <div class="mySlides fade">
-        <img class="slide-image" src="certificates/c11.jpg" style="width:100%">
+      <br>
+      <div class="slideshow-dot" style="text-align:center">
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span> 
+        <span class="dot"></span> 
+        <span class="dot"></span>
+        <span class="dot"></span> 
+        <span class="dot"></span>
       </div>
     </div>
-    <br>
-    <div class="slideshow-dot" style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span>
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span>
-      <span class="dot"></span> 
-      <span class="dot"></span>
-    </div>
-  </div>
     <!-- end of slideshow section-- -->  
-  </section>
+ 
 
   <!-- ---my services--- -->
   <section id="services">
@@ -438,5 +441,35 @@
   <script src="main.js"></script>
 
 
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".navbar-link");
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              navLinks.forEach((link) => {
+                link.parentElement.classList.remove("active"); // Remove active class
+                if (link.getAttribute("href").substring(1) === entry.target.id) {
+                  link.parentElement.classList.add("active"); // Add active class
+                }
+              });
+            }
+          });
+        },
+        {       
+
+          threshold: 0.5 } // Adjust the threshold for when a section is considered "active"
+      );
+  
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    });
+  </script>
+  
 </body>
 </html>
