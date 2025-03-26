@@ -62,12 +62,16 @@ nav {
 }
 #menu-btn{
   position: fixed;
-  right: 0;
-  padding: 0.75rem 1rem;
+  right: 15px;
+  top:15px;
+  padding: .5rem;
   width: fit-content;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  border-radius: 50%;
+  background-color: #f7c193;
+  
 }
 .navbar-ulist {
   position: absolute;
@@ -197,8 +201,8 @@ nav {
   height: fit-content;
 }
 .skills-logo{
-  height: 150px;
-  width: 150px;
+  height: 75px;
+  width: 75px;
   cursor: pointer;
   opacity: 0; /* Initially hidden */
   transform: scale(0); /* Initially scaled down */
@@ -864,8 +868,8 @@ form div input, div textarea{
 @media (min-width: 1200px) {
   /* Large screens (e.g., desktops) */
   .skills-logo{
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
     cursor: pointer;
     opacity: 0; /* Initially hidden */
     transform: scale(0); /* Initially scaled down */
