@@ -20,7 +20,7 @@ navLinks.addEventListener("click", (e) => {
 const typed = new Typed('.multiple-text', {
   strings: ['Sub Inspector of Police (Technical)','Electronics and Communication Engineer','Full Stack Developer','Template Designer'],
   typeSpeed:70,
-  backSpeed:70,
+  backSpeed:50,
   backDelay:1000,
   loop:true,
 });
@@ -85,7 +85,6 @@ loadingScreen.style.display = "flex";
 
 ///scroll animation
 
-// --------- skills section------
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
   // hero section 
@@ -113,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // about section 
   let t2 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".intro-image",
+      trigger: ".intro-container",
       start: "top 80%",
       end: "bottom 50%",
       toggleActions: "play reverse play reverse",
@@ -188,17 +187,17 @@ let t3 = gsap.timeline({
 // Sequential animations with reduced delay
 t3.from(".resume-container p:nth-of-type(1)", { y: 100, opacity: 0, duration: 0.8, ease: "power2.out" })
   .from(".resumess1", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5") // Start 0.5s before previous animation ends
-  .from(".ji1 .journey-grid-header", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".ji1 .journey-grid-header", { x: -100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
   .from(".ji1 .journey-card", { 
-    y: 50, 
+    x: -100, 
     opacity: 0, 
     duration: 1, 
     ease: "power2.out", 
     stagger: 0.2 // Animates each icon one by one
   }, "-=0.3") // Icons start slightly before hero-h3 finishes
-  .from(".ji2 .journey-grid-header", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".ji2 .journey-grid-header", { x: 1000, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
   .from(".ji2 .journey-card", { 
-    y: 50, 
+    x: 1000, 
     opacity: 0, 
     duration: 1, 
     ease: "power2.out", 
