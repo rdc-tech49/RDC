@@ -203,11 +203,20 @@ t3.from(".resume-container p:nth-of-type(1)", { y: 100, opacity: 0, duration: 0.
     ease: "power2.out", 
     stagger: 0.2 // Animates each icon one by one
   }, "-=0.3") // Icons start slightly before hero-h3 finishes
-  .from(".download-btn", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
-  .from(".resumess2", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".download-btn", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5");
+  
+  let t7 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".slideshow-container",
+      start: "top 80%",
+      end: "bottom 0%",
+      toggleActions: "play reverse play reverse",
+      markers: false, // Set true for debugging
+    },
+  });
+  t7.from(".resumess2", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
   .from(".slideshow-container", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
   .from(".slideshow-dot", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5");
-
 
   // project  section 
 let t4 = gsap.timeline({
