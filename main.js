@@ -26,42 +26,34 @@ const typed = new Typed('.multiple-text', {
 });
 //end of typed js
 
-
+// image slideshow
 let slideIndex = 1;
 showSlides(slideIndex);
-
 // Function to change slides (prev/next)
 function changeSlide(n) {
   showSlides(slideIndex += n);
 }
-
 // Function to show the current slide based on index
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-
 function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-
   if (n > slides.length) { slideIndex = 1 }
   if (n < 1) { slideIndex = slides.length }
-
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-
   for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
 // Auto slide (Optional: Uncomment to enable automatic slideshow)
  setInterval(() => { changeSlide(1); }, 3000);
 // end of image slideshow
-
 
 
 // contact google sheet
@@ -73,7 +65,6 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzsTqnGCtMNxxdtUUSNEY
       e.preventDefault()
 // Show the loading screen
 loadingScreen.style.display = "flex";
-
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
           // Hide loading screen
@@ -167,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
           markers: false, // Set true for debugging
       }
   });
-
   // Hover Effect (Optional)
   document.querySelectorAll(".skills-logo").forEach(icon => {
       icon.addEventListener("mouseenter", () => {
@@ -178,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
           gsap.to(icon, { scale: 1, duration: 0.2 });
       });
   });
-
 
   // resume section 
 let t3 = gsap.timeline({
@@ -201,20 +190,20 @@ t3.from(".resume-container p:nth-of-type(1)", { y: 100, opacity: 0, duration: 0.
     ease: "power2.out", 
     stagger: 0.2 // Animates each icon one by one
   }, "-=0.3") // Icons start slightly before hero-h3 finishes
-  .from(".ji2 .journey-grid-header", { x: 1000, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5")
+  .from(".ji2 .journey-grid-header", { x: 1000, opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.5")
   .from(".ji2 .journey-card", { 
     x: 1000, 
     opacity: 0, 
-    duration: 1, 
+    duration: 0.8, 
     ease: "power2.out", 
     stagger: 0.2 // Animates each icon one by one
   }, "-=0.3") // Icons start slightly before hero-h3 finishes
-  .from(".download-btn", { y: 100, opacity: 0, duration: 1, ease: "power2.out" }, "-=0.5");
+  .from(".download-btn", { y: 100, opacity: 0, duration: 1, ease: "power2.out" });
   
   let t7 = gsap.timeline({
     scrollTrigger: {
       trigger: ".slideshow-container",
-      start: "top 60%",
+      start: "top 80%",
       end: "bottom 30%",
       toggleActions: "play reverse play reverse",
       markers: false, // Set true for debugging

@@ -129,7 +129,6 @@ nav {
   font-size: 2rem;
 } 
 
-
 #hero span{
   color: #f78522;
 }
@@ -145,7 +144,13 @@ nav {
    color: #ff9742; 
   transform: translateY(-5px);
 }
+.hero-social-icons a:hover i {
+  background: linear-gradient(45deg, #ff9966, #ff5e62, #ff6600); /* Apply gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make text take gradient */
+}
 /* --end of hero section */
+
 /* --about section--- */
 .intro-image {
   max-width: 300px;
@@ -188,7 +193,6 @@ nav {
 }
 .my-interest{
   color:#0c0a5d;
-
 }
 .interest-flex p{
   color:#0c0a5d;
@@ -318,8 +322,6 @@ nav {
 
 
 /* --image slideshow-- */
-
-
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
@@ -380,14 +382,10 @@ img {vertical-align: middle;}
 .prev:hover, .next:hover {
   background: #f79f57;
   /* box-shadow: 0 0 10px #f79f57, 0 0 10px #f79f57; */
-
 }
-
 /* Positioning */
 .prev { left: 2px; }
 .next { right: 2px; }
-
-
 
 
 /* Fading animation */
@@ -481,7 +479,6 @@ img {vertical-align: middle;}
   margin-top: 5rem;
 }
 
-
 .lgscrview{
   display: none;
 }
@@ -517,7 +514,7 @@ img {vertical-align: middle;}
 }
 .info-icon i:hover{
   color: white ;
-  background: #ff9742;
+  background: #ff9742;  
 }
 
 .info-item div h5{
@@ -544,18 +541,23 @@ img {vertical-align: middle;}
 .contact-icon{
   font-size:25px;
   color:#767b83;
-  
 }
 
 .contact-icon:hover{
   color: #f78522;
 }
 .contact-social-icons a:hover{
-  color: #ff9742;
   transform: translateY(-5px);
 }
-.contact-btn{
 
+.contact-social-icons a:hover i {
+  background: linear-gradient(45deg, #ff9966, #ff5e62, #ff6600); /* Apply gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make text take gradient */
+}
+
+
+.contact-btn{
   width: fit-content;
   padding: 10px 15px;
   border-radius: 6px; 
@@ -584,7 +586,6 @@ form div input, div textarea{
   color: #4b5563 !important;
 }
 .send-btn{
-  
   border-radius: 6px; 
   color: #fff;
   background-color: #767b83;
@@ -602,26 +603,13 @@ form div input, div textarea{
   border: 1px solid #f7d3b6 !important;
   box-shadow: 0 0 0 0.25rem rgba(255, 165, 0, 0.25) !important; /* Optional: Adds a subtle orange focus shadow */
 }
+
 #msg{
   color: #ff9742;
   font-weight: bold;
   margin-top: 1rem;
 }
-/* #loading-screen{
-  display: none; 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background: rgba(0, 0, 0, 0.7); 
-  color: white; 
-  font-size: 20px; 
-  justify-content: center; 
-  align-items: center;
-  z-index: 9999;
-} */
-/* footer  */  
+ 
 #footer{
   background-color: #767b83;
   color: white;
@@ -676,7 +664,6 @@ form div input, div textarea{
 
 
 @media (width > 768px){
-
   .section-subheader{
     font-size: 2.5rem;
   }
@@ -842,6 +829,7 @@ form div input, div textarea{
     transform: scale(0); /* Initially scaled down */
   }
 }
+
 /* Large devices (laptops/desktops) */
 @media (width> 992px) {
   /* CSS rules */
@@ -854,7 +842,6 @@ form div input, div textarea{
       visibility: visible;
     }
   }
-
   .navbar-list.active {
     background-color: #f78522;
     .nav-img-div{
@@ -954,7 +941,6 @@ form div input, div textarea{
 
 
 /* /gradient color  */
-
 .gradient-text {
   background: linear-gradient(to right, orange, #ff6600, #cc3300); /* Adjust colors as needed */
   -webkit-background-clip: text; /* Clip the background to the text */
@@ -962,8 +948,6 @@ form div input, div textarea{
   /* display: inline-block;  */
   /* Required for the clipping to work */
 }
-
-
 
 /* dark */
 .deep-orange-gradient {
@@ -976,7 +960,7 @@ form div input, div textarea{
   background: linear-gradient(to right, #ff9966, #ff5e62, #ff4081, #ff6600);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 
@@ -988,25 +972,21 @@ form div input, div textarea{
 
 /* loading screen  */
 #loading-screen{
-  
-  
-
-
-    display: none; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    color: white; 
-    font-size: 20px; 
-    justify-content: center; 
-    align-items: center;
-    z-index: 9999;
-    padding:0;
-    margin:0;
-    background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
-    /* background:radial-gradient(#f7a258, #d68c4b); */
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  color: white; 
+  font-size: 20px; 
+  justify-content: center; 
+  align-items: center;
+  z-index: 9999;
+  padding:0;
+  margin:0;
+  background-image: radial-gradient(circle farthest-corner at center, #3C4B57 0%, #1C262B 100%);
+  /* background:radial-gradient(#f7a258, #d68c4b); */
 }
 
 .wrapper{
