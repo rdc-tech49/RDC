@@ -27,48 +27,6 @@ const typed = new Typed('.multiple-text', {
 //end of typed js
 
 
-//image slideshow
-// let slideIndex = 1;
-// let slideInterval;
-// showSlides(slideIndex); // Show first slide initially
-// autoSlide(); // Start automatic sliding
-// function showSlides(n) {
-//   let slides = document.getElementsByClassName("mySlides");
-//   let dots = document.getElementsByClassName("dot");
-//   if (n > slides.length) { slideIndex = 1 }
-//   if (n < 1) { slideIndex = slides.length }
-//   for (let i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   for (let i = 0; i < dots.length; i++) {
-//     dots[i].classList.remove("active");
-//   }
-//   slides[slideIndex - 1].style.display = "block";
-//   dots[slideIndex - 1].classList.add("active");
-// }
-// // Auto slide function
-// function autoSlide() {
-//   slideInterval = setInterval(() => {
-//     slideIndex++;
-//     showSlides(slideIndex);
-//   }, 3000);
-// }
-// // Function to navigate to a specific slide when a dot is clicked
-// function currentSlide(n) {
-//   clearInterval(slideInterval); // Stop auto slide
-//   slideIndex = n; // Set current slide index
-//   showSlides(slideIndex);
-//   autoSlide(); // Restart auto sliding
-// }
-// // Add event listeners to dots
-// document.addEventListener("DOMContentLoaded", function () {
-//   let dots = document.getElementsByClassName("dot");
-//   for (let i = 0; i < dots.length; i++) {
-//     dots[i].addEventListener("click", function () {
-//       currentSlide(i + 1);
-//     });
-//   }
-// });
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -100,11 +58,8 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
 }
-
 // Auto slide (Optional: Uncomment to enable automatic slideshow)
  setInterval(() => { changeSlide(1); }, 3000);
-
-
 // end of image slideshow
 
 
@@ -112,13 +67,8 @@ function showSlides(n) {
 // contact google sheet
 const scriptURL = 'https://script.google.com/macros/s/AKfycbzsTqnGCtMNxxdtUUSNEYxUFHfvD_BNjSEaIVHFmgelo5DNPWwvYSD49Mo3XXLwWISQAA/exec'
     const form = document.forms['submit-to-google-sheet']
-
-    const msg = document.getElementById("msg")
-    
-    
-    const loadingScreen = document.getElementById("loading-screen"); // Reference to the loading screen
-
-  
+    const msg = document.getElementById("msg")    
+    const loadingScreen = document.getElementById("loading-screen"); // Reference to the loading screen  
     form.addEventListener('submit', e => {
       e.preventDefault()
 // Show the loading screen
@@ -141,7 +91,6 @@ loadingScreen.style.display = "flex";
 
 
 ///scroll animation
-
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
   // hero section 
@@ -170,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let t2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".intro-container",
-      start: "top 80%",
-      end: "bottom 50%",
+      start: "top 60%",
+      end: "bottom 30%",
       toggleActions: "play reverse play reverse",
       markers: false, // Set true for debugging
     },
@@ -195,8 +144,8 @@ document.addEventListener("DOMContentLoaded", function () {
   let t6 = gsap.timeline({
     scrollTrigger: {
       trigger: ".skill-container",
-      start: "top 80%",
-      end: "bottom 50%",
+      start: "top 60%",
+      end: "bottom 30%",
       toggleActions: "play reverse play reverse",
       markers: false, // Set true for debugging
     },
@@ -212,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ease: "elastic.out(1, 0.5)", // Bounce effect
       scrollTrigger: {
           trigger: ".skill-container", // Starts animation when skills section is in view
-          start: "top 80%", // Triggers when the section enters 80% of the viewport
+          start: "top 50%", // Triggers when the section enters 80% of the viewport
           end: "bottom 30%", // Animation resets when scrolled past 20%
           toggleActions: "play reverse play reverse", // Plays when entering, reverses when leaving
           markers: false, // Set true for debugging
@@ -235,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
 let t3 = gsap.timeline({
   scrollTrigger: {
     trigger: ".resume-container",
-    start: "top 80%",
+    start: "top 60%",
     end: "bottom 10%",
     toggleActions: "play reverse play reverse",
     markers: false, // Set true for debugging
@@ -265,8 +214,8 @@ t3.from(".resume-container p:nth-of-type(1)", { y: 100, opacity: 0, duration: 0.
   let t7 = gsap.timeline({
     scrollTrigger: {
       trigger: ".slideshow-container",
-      start: "top 80%",
-      end: "bottom 0%",
+      start: "top 60%",
+      end: "bottom 30%",
       toggleActions: "play reverse play reverse",
       markers: false, // Set true for debugging
     },
@@ -279,7 +228,7 @@ t3.from(".resume-container p:nth-of-type(1)", { y: 100, opacity: 0, duration: 0.
 let t4 = gsap.timeline({
   scrollTrigger: {
     trigger: ".services-container ",
-    start: "top 80%",
+    start: "top 60%",
     end: "bottom 20%",
     toggleActions: "play reverse play reverse",
     markers: false, // Set true for debugging
@@ -300,7 +249,7 @@ t4.from(".services-container .section-header", { y: 100, opacity: 0, duration: 0
 let t5 = gsap.timeline({
   scrollTrigger: {
     trigger: ".contact-container ",
-    start: "top 80%",
+    start: "top 60%",
     end: "bottom 48%",
     toggleActions: "play reverse play reverse",
     markers: false, // Set true for debugging
