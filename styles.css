@@ -347,12 +347,48 @@ img {vertical-align: middle;}
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: all 0.6s ease-in-out;
+}
+
+.dot:hover {
+  cursor: pointer;
+  background-color: #f3740c;
+  box-shadow: 0 0 10px #f3740c, 0 0 20px #ff8800;
+  transform: scale(1.2); /* Slightly enlarges the dot */
 }
 
 .active {
   background-color: var(--primary-color);
 }
+
+/* Style the previous & next buttons */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  font-weight: 5px;
+  padding: 8px 2px;
+  color: white;
+  background: rgba(177, 176, 176, 0.6);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.prev:hover, .next:hover {
+  background: #f79f57;
+  /* box-shadow: 0 0 10px #f79f57, 0 0 10px #f79f57; */
+
+}
+
+/* Positioning */
+.prev { left: 2px; }
+.next { right: 2px; }
+
+
+
 
 /* Fading animation */
 .fade {
@@ -632,6 +668,11 @@ form div input, div textarea{
     opacity: 0; /* Initially hidden */
     transform: scale(0); /* Initially scaled down */
   }
+  .prev, .next {
+    font-size: 10px;
+    font-weight: 5px;
+    padding: 8px 2px;
+  }
 }
 
 
@@ -754,6 +795,14 @@ form div input, div textarea{
   .slide-image{
     height: 300px;
   }
+  .prev, .next {
+    font-size: 15px;
+    font-weight: 1px;
+    padding: 10px 2px;
+  }
+  .prev { left: 2px; }
+  .next { right: 2px; }
+  
   .layer h3{
     font-size: 1.5rem;
     margin-bottom: 0;
@@ -881,6 +930,11 @@ form div input, div textarea{
     opacity: 0; /* Initially hidden */
     transform: scale(0); /* Initially scaled down */
   }
+  .prev, .next {
+    font-size: 15px;
+    font-weight: 10px;
+    padding: 10px 5px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -891,6 +945,11 @@ form div input, div textarea{
     cursor: pointer;
     opacity: 0; /* Initially hidden */
     transform: scale(0); /* Initially scaled down */
+  }
+  .prev, .next {
+    font-size: 15px;
+    font-weight: 10px;
+    padding: 10px 5px;
   }
 }
 

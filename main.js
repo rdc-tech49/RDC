@@ -27,27 +27,84 @@ const typed = new Typed('.multiple-text', {
 //end of typed js
 
 
-
 //image slideshow
-let slideIndex = 0;
-showSlides();
+// let slideIndex = 1;
+// let slideInterval;
+// showSlides(slideIndex); // Show first slide initially
+// autoSlide(); // Start automatic sliding
+// function showSlides(n) {
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) { slideIndex = 1 }
+//   if (n < 1) { slideIndex = slides.length }
+//   for (let i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (let i = 0; i < dots.length; i++) {
+//     dots[i].classList.remove("active");
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   dots[slideIndex - 1].classList.add("active");
+// }
+// // Auto slide function
+// function autoSlide() {
+//   slideInterval = setInterval(() => {
+//     slideIndex++;
+//     showSlides(slideIndex);
+//   }, 3000);
+// }
+// // Function to navigate to a specific slide when a dot is clicked
+// function currentSlide(n) {
+//   clearInterval(slideInterval); // Stop auto slide
+//   slideIndex = n; // Set current slide index
+//   showSlides(slideIndex);
+//   autoSlide(); // Restart auto sliding
+// }
+// // Add event listeners to dots
+// document.addEventListener("DOMContentLoaded", function () {
+//   let dots = document.getElementsByClassName("dot");
+//   for (let i = 0; i < dots.length; i++) {
+//     dots[i].addEventListener("click", function () {
+//       currentSlide(i + 1);
+//     });
+//   }
+// });
+let slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
-  let i;
+// Function to change slides (prev/next)
+function changeSlide(n) {
+  showSlides(slideIndex += n);
+}
+
+// Function to show the current slide based on index
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
+
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 3000); // Change image every 2 seconds
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
 }
+
+// Auto slide (Optional: Uncomment to enable automatic slideshow)
+ setInterval(() => { changeSlide(1); }, 3000);
+
+
 // end of image slideshow
 
 
